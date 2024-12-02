@@ -3,7 +3,7 @@
 let
   mkTestBuild = package: let
     emacsPackages = pkgs.emacsPackagesFor package;
-    emacsWithPackages = emacsPackages.emacsWithPackages;
+    emacsWithPackages = emacsPackages.emacs.pkgs.withPackages;
   in emacsWithPackages(epkgs: [ ]);
 
 in {
