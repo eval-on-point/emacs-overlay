@@ -53,7 +53,7 @@ let
     then override self super
     else override super
   );
-  emacsWithPackages = emacsPackages.emacsWithPackages;
+  emacsWithPackages = emacsPackages.emacs.pkgs.withPackages;
   mkPackageError = name:
     let
       errorFun = if (alwaysEnsure != null && alwaysEnsure) then builtins.trace else throw;
